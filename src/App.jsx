@@ -1,8 +1,11 @@
-import { useState } from 'react';
-import './App.css';
+import React from 'react'
+import FilterableProductTable from './components/FilterableProductTable'
 
-function App() {
-  return <></>;
+export default function App() {
+  return (
+    <div>
+      <h1>Product Table</h1>
+      <FilterableProductTable/>
+    </div>
+  )
 }
-
-export default App;
