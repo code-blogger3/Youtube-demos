@@ -1,7 +1,11 @@
 import React from 'react'
 
-export default function ProductCategoryRow() {
+export default function ProductCategoryRow({category}) {
   return (
-    <div>ProductCategoryRow</div>
+    <tr>
+      <th colSpan='2'> 
+        {category}
+      </th>
+    </tr>
   )
 }

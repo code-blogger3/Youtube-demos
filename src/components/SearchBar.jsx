@@ -2,6 +2,20 @@ import React from 'react'
 
 export default function SearchBar() {
   return (
-    <div>SearchBar</div>
+   <form>
+    <input
+    type='text'
+    placeholder='Search...'
+
+    />
+    <p>
+      <input
+      type='checkbox'
+
+      />
+      {' '}
+      Only show products in stock
+    </p>
+   </form>
   )
 }
