@@ -2,12 +2,15 @@ import React from 'react'
 import ProductCategoryRow from './ProductCategoryRow'
 import ProductRow from './ProductRow'
 
-export default function ProductTable({products}) {
+export default function ProductTable({products,filterText,inStockOnly}) {
   const rows = []
   let lastCategory = null
 
   products.forEach((product)=>{
-    
+  if (product.name.indexOf(filterText) === -1|| (!product.stocked && inStockOnly ) ){
+    return;
+  }
+
     if (product.category !== lastCategory){
       rows.push(
 <ProductCategoryRow category={product.category}
